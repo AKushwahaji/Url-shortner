@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url-shortner</title>
+    
+</head>
+<body>
+
+       <h2>Short your Url</h2>
+       <form action="/form-data" method="POST">
+        <strong>Name: <input type="text" name="name" value="" placeholder="Enter your name">
+            <strong> Email: <input type="text" name="mail" value="" placeholder="Enter your mail">
+        <input type="text" name="url" value="" placeholder="Paste your Url here">
+        <input type="Submit">
+       </form>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+        body {
+            background-color: #4b6799;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            background-color: #fff;
+            width: 50%; /* Half the width of the screen */
+            max-width: 500px; /* Restrict maximum width */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px); /* Ensure input fits well within form */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #30912c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #2f792d;
+        }
+    </style>
+</head>
+<body>
+    <form action="/form-data" method="POST">
+        <h2>Short Your URL</h2>
+        <input type="text" id="longurl" name="longURL" value="" placeholder="Paste your URL here" required>
+        
+        <input type="submit" value="Submit">
+         <% if(shortUrl) { %>
+            <p>Short URL: <a href="<%=shortUrl%>" target="_blank"><%=shortUrl%></a>
+            </p> <%} %>
+    </form>
+</body>
+</html>
