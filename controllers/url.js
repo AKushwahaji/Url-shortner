@@ -5,7 +5,7 @@ export const urlShort = async (req, res) => {
     try {
         const longUrl = req.body.longURL; 
         const shortCode = nanoid(8);
-        const shortUrl = `http://localhost:5000/${shortCode}`;
+        const shortUrl = `https://url-shortner-brown-theta.vercel.app/${shortCode}`;
         
         // console.log("longUrl - ", longUrl);
 
